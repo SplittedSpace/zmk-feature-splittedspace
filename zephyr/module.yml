@@ -1,5 +1,4 @@
 name: zmk-firmware--new
-type: module
 build:
   cmake: .
   kconfig: Kconfig
