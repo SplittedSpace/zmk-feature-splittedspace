@@ -1,5 +1,3 @@
-zephyr_include_directories(include)
-
 target_sources(app PRIVATE src/behaviors/behavior_indicators.c)
 
 if (CONFIG_ZMK_BEHAVIOR_INDICATORS)
