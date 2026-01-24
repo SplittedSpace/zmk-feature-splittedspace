@@ -1,0 +1,1 @@
+int zmk_split_bt_call_bat_st_asked();
