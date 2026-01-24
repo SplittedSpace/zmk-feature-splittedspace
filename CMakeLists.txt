@@ -1,7 +1,5 @@
 zephyr_include_directories(include)
 
-target_sources(app PRIVATE src/behaviors/behavior_indicators.c)
-
 if (CONFIG_ZMK_BEHAVIOR_INDICATORS)
   target_sources(app PRIVATE src/events/indicators_changed.c)
   target_sources(app PRIVATE src/behaviors/behavior_indicators.c)
