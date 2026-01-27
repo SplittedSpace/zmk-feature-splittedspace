@@ -1,9 +1,11 @@
 #include <zephyr/kernel.h>
+#include <zmk/ble.h>
 
 extern struct k_work_q split_central_split_run_q;
 
-static uint8_t bat_d = 0;
+#if ZMK_BLE_IS_CENTRAL
 
+static uint8_t bat_d = 0;
 static void split_central_bat_st_asked_callback(struct k_work *work) {
     for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
         if (peripherals[i].state != PERIPHERAL_SLOT_STATE_CONNECTED) {
@@ -21,3 +23,5 @@ static K_WORK_DEFINE(split_central_bat_st_asked, split_central_bat_st_asked_call
 int zmk_split_bt_call_bat_st_asked() {
     return k_work_submit_to_queue(&split_central_split_run_q, &split_central_bat_st_asked);
 }
+
+#endif

@@ -1,4 +1,3 @@
-
 config ZMK_LED_WIDGETS
     bool "Display widgets on top of LEDs"
 
@@ -7,3 +6,12 @@ if ZMK_LED_WIDGETS
         int "Maximum number of widgets for a event type"
         default 5
 endif
+
+
+menu "Splitted Space behaviors"
+
+config ZMK_BEHAVIOR_INDICATORS
+    bool "Enable behavior indicators"
+    default y
+
+endmenu
