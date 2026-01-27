@@ -45,9 +45,6 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
                                      struct zmk_behavior_binding_event event) {
     switch (binding->param1) {
     case BAT_ST:
-// #if (!CONFIG_ZMK_SPLIT || (CONFIG_ZMK_SPLIT && CONFIG_ZMK_SPLIT_ROLE_CENTRAL))
-//         zmk_split_bt_call_bat_st_asked();
-// #endif
         uint8_t bat_level = bt_bas_get_battery_level();
         raise_zmk_indicators_battery_status_asked(
             (struct zmk_indicators_battery_status_asked){.level = bat_level});

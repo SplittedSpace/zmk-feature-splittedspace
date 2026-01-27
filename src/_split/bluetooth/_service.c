@@ -1,1 +1,0 @@
-// https://github.com/SplittedSpace/zmk-firmware/commit/afb025657d036a4b2fd7268adb84373dc47756e5#diff-18de66983adf7197deaf9e826c4087b486beb147e0ab19445d41a85ba7be9fe0
