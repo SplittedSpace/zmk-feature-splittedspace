@@ -1,6 +1,6 @@
 zephyr_include_directories(include)
 
-# target_sources(app PRIVATE src/split/bluetooth/central.c)
+target_sources(app PRIVATE src/split/bluetooth/central.c)
 # target_sources(app PRIVATE src/split/bluetooth/service.c)
 
 if (CONFIG_ZMK_BEHAVIOR_INDICATORS)
