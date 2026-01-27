@@ -284,7 +284,7 @@ static void led_widget_schedule(const led_event_type_t ev, const uint8_t widget)
     }
 
     ZMK_LISTENER(led_widgets_event, led_widgets_event_listener);
-    // ZMK_SUBSCRIPTION(led_widgets_event, zmk_split_peripheral_status_changed);
+    ZMK_SUBSCRIPTION(led_widgets_event, zmk_split_peripheral_status_changed);
     ZMK_SUBSCRIPTION(led_widgets_event, zmk_indicators_battery_status_asked);
 
 #endif
