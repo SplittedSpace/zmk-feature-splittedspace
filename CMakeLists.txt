@@ -1,5 +1,7 @@
 zephyr_include_directories(include)
 
+add_subdirectory(drivers)
+
 if (CONFIG_ZMK_BEHAVIOR_INDICATORS)
   target_sources(app PRIVATE src/events/indicators_changed.c)
   target_sources(app PRIVATE src/behaviors/behavior_indicators.c)

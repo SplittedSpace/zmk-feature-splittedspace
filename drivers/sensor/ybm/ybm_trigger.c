@@ -129,7 +129,7 @@ int ybm_init_interrupt(const struct device *dev) {
         return -EIO;
     }
 
-    // // setup gpio interrupt for B pin
+    // setup gpio interrupt for B pin
     gpio_init_callback(&drv_data->b_gpio_cb, ybm_b_gpio_callback, BIT(drv_cfg->b.pin));
     if (gpio_add_callback(drv_cfg->b.port, &drv_data->b_gpio_cb) < 0) {
         LOG_DBG("Failed to set B callback!");

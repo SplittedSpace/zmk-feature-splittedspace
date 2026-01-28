@@ -20,7 +20,6 @@ struct ybm_data {
     int8_t pulses;
     int8_t ticks;
     int8_t delta;
-    // struct k_timer delay_timer;
 
     // Timer for re-read current state
     struct k_timer debounce_timer;
