@@ -1,5 +1,5 @@
 
-#define DT_DRV_COMPAT alps_ybm
+#define DT_DRV_COMPAT ysa_ybm
 
 #include <zephyr/device.h>
 #include <zephyr/drivers/gpio.h>
