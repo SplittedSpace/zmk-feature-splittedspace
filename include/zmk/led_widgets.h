@@ -29,8 +29,6 @@ typedef enum {
 
 #define _NARG(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, N, ...) N
 #define NARG(...) _NARG(__VA_ARGS__, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-/* #define _F(x) 1 */
-/* #define NARG(x) FOR_EACH(_F, (+), x) */
 #define LEDS LIST_DROP_EMPTY(DT_SUPPORTS_DEP_ORDS(DT_CHOSEN(zmk_led_widgets_dev)))
 #define NUM_LEDS UTIL_EVAL(NARG(LEDS))
 

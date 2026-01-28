@@ -5,7 +5,6 @@
 #include <zmk/behavior.h>
 #include <zmk/events/indicators_changed.h>
 #include <zephyr/bluetooth/services/bas.h>
-// #include <zmk/split/bluetooth/central.h>
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
@@ -60,10 +59,16 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
     return -ENOTSUP;
 }
 
+static int on_keymap_binding_released(struct zmk_behavior_binding *binding,
+                                     struct zmk_behavior_binding_event event) {
+    return 0;
+}
+
 static int behavior_indicators_init(const struct device *dev) { return 0; };
 
 static const struct behavior_driver_api behavior_indicators_driver_api = {
     .binding_pressed = on_keymap_binding_pressed,
+    .binding_released = on_keymap_binding_released,
 #if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
     .parameter_metadata = &metadata,
 #endif // IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
