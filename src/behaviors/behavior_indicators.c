@@ -5,7 +5,7 @@
 #include <zmk/behavior.h>
 #include <zmk/events/indicators_changed.h>
 #include <zephyr/bluetooth/services/bas.h>
-#include <zmk/split/bluetooth/central.h>
+// #include <zmk/split/bluetooth/central.h>
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
