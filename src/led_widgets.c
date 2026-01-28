@@ -289,9 +289,6 @@ static void led_widget_schedule(const led_event_type_t ev, const uint8_t widget)
 
 #endif
 
-
-
-
 static void loop_timer_handler(struct k_timer *timer) {
     const led_event_type_t ev = (timer - loop_timers) / sizeof(struct k_timer) + 1;
     led_widget_schedule(ev, last_widgets_ind[ev]);
