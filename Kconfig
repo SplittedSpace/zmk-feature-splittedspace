@@ -1,4 +1,4 @@
-rsource "module/drivers/sensor/Kconfig"
+rsource "drivers/sensor/Kconfig"
 
 config ZMK_LED_WIDGETS
     bool "Display widgets on top of LEDs"
