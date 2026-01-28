@@ -14,18 +14,18 @@ choice YBM_TRIGGER_MODE
     help
       Specify the type of triggering to be used by the driver.
 
-config YBM_TRIGGER_NONE
-    bool "No trigger"
+    config YBM_TRIGGER_NONE
+        bool "No trigger"
 
-config YBM_TRIGGER_GLOBAL_THREAD
-    bool "Use global thread"
-    depends on GPIO
-    select YBM_TRIGGER
+    config YBM_TRIGGER_GLOBAL_THREAD
+        bool "Use global thread"
+        depends on GPIO
+        select YBM_TRIGGER
 
-config YBM_TRIGGER_OWN_THREAD
-    bool "Use own thread"
-    depends on GPIO
-    select YBM_TRIGGER
+    config YBM_TRIGGER_OWN_THREAD
+        bool "Use own thread"
+        depends on GPIO
+        select YBM_TRIGGER
 
 endchoice
 
